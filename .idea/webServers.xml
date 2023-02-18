@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="fa1fa1fc-b878-4604-9d81-3b335ce5515f" name="Viren">
+        <fileTransfer accessType="SFTP" host="139-177-192-133.ip.linodeusercontent.com" port="22" sshConfigId="71c97176-b6b2-42e1-956c-fa13bad277d5" sshConfig="root@139-177-192-133.ip.linodeusercontent.com:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

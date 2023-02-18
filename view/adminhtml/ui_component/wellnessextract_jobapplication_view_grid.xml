@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">wellnessextract_jobapplication_view_grid.wellnessextract_jobapplication_view_grid_record_data_source</item>
+            <item name="deps" xsi:type="string">wellnessextract_jobapplication_view_grid.wellnessextract_jobapplication_view_grid_record_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Add New Record</item>
+        <item name="config" xsi:type="array">
+            <item name="dataScope" xsi:type="string">data</item>
+            <item name="namespace" xsi:type="string">wellnessextract_jobapplication_view_grid</item>
+        </item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+        <item name="buttons" xsi:type="array">
+            <item name="add" xsi:type="array">
+                <item name="name" xsi:type="string">index</item>
+                <item name="label" xsi:type="string" translate="true">Back</item>
+                <item name="class" xsi:type="string">primary</item>
+                <item name="url" xsi:type="string">*/*/index</item>
+            </item>
+        </item>
+    </argument>
+    <dataSource name="wellnessextract_jobapplication_view_grid_record_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">WellnessExtract\JobApplication\Ui\DataProvider\JobApplication\FormDataProvider</argument>
+            <argument name="name" xsi:type="string">wellnessextract_jobapplication_view_grid_record_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">id</argument>
+            <argument name="requestFieldName" xsi:type="string">id</argument>
+            <argument name="data" xsi:type="array">
+            </argument>
+        </argument>
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+    </dataSource>
+    <fieldset name="general_information">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="collapsible" xsi:type="boolean">false</item>
+                <item name="label" xsi:type="string" translate="true">General Information</item>
+                <item name="sortOrder" xsi:type="number">20</item>
+            </item>
+        </argument>
+        <field name="first_name" sortOrder="10">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">First Name</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/text</item>
+                    <item name="source" xsi:type="string">jobapplication</item>
+                    <item name="dataScope" xsi:type="string">first_name</item>
+                </item>
+            </argument>
+        </field>
+        <field name="last_name" sortOrder="20">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Last Name</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/text</item>
+                    <item name="source" xsi:type="string">jobapplication</item>
+                    <item name="dataScope" xsi:type="string">last_name</item>
+                </item>
+            </argument>
+        </field>
+        <field name="email" sortOrder="30">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">E-mail</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/text</item>
+                    <item name="source" xsi:type="string">jobapplication</item>
+                    <item name="dataScope" xsi:type="string">email</item>
+                </item>
+            </argument>
+        </field>
+        <field name="department" sortOrder="40">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Department</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/text</item>
+                    <item name="source" xsi:type="string">jobapplication</item>
+                    <item name="dataScope" xsi:type="string">department</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="preferred_name" sortOrder="50">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Preferred Name</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/text</item>
+                    <item name="source" xsi:type="string">jobapplication</item>
+                    <item name="dataScope" xsi:type="string">preferred_name</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="preferred_pronoun" sortOrder="60">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Preferred Pronoun</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/text</item>
+                    <item name="source" xsi:type="string">jobapplication</item>
+                    <item name="dataScope" xsi:type="string">preferred_pronoun</item>
+                </item>
+            </argument>
+        </field>
+        
+        <field name="city" sortOrder="70">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">City</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/text</item>
+                    <item name="source" xsi:type="string">jobapplication</item>
+                    <item name="dataScope" xsi:type="string">city</item>
+                </item>
+            </argument>
+        </field>
+        
+        <field name="state" sortOrder="80">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">State</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/text</item>
+                    <item name="source" xsi:type="string">jobapplication</item>
+                    <item name="dataScope" xsi:type="string">state</item>
+                </item>
+            </argument>
+        </field>
+       
+       <field name="country" sortOrder="90">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Country</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/text</item>
+                    <item name="source" xsi:type="string">jobapplication</item>
+                    <item name="dataScope" xsi:type="string">country</item>
+                </item>
+            </argument>
+        </field>
+        
+        <field name="phone" sortOrder="100">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Phone</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/text</item>
+                    <item name="source" xsi:type="string">jobapplication</item>
+                    <item name="dataScope" xsi:type="string">phone</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="linkedin_profile" sortOrder="110">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Linkedin Profile</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/text</item>
+                    <item name="source" xsi:type="string">jobapplication</item>
+                    <item name="dataScope" xsi:type="string">linkedin_profile</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="minimum_desired_pay" sortOrder="120">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Minimum Desired Pay</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/text</item>
+                    <item name="source" xsi:type="string">jobapplication</item>
+                    <item name="dataScope" xsi:type="string">minimum_desired_pay</item>
+                </item>
+            </argument>
+        </field>
+        <field name="ethnicity" sortOrder="130">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">ethnicity</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/text</item>
+                    <item name="source" xsi:type="string">jobapplication</item>
+                    <item name="dataScope" xsi:type="string">ethnicity</item>
+                </item>
+            </argument>
+        </field>
+        <field name="gender" sortOrder="140">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Gender</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/text</item>
+                    <item name="source" xsi:type="string">jobapplication</item>
+                    <item name="dataScope" xsi:type="string">gender</item>
+                </item>
+            </argument>
+        </field>
+        <field name="status" sortOrder="150">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Status</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/text</item>
+                    <item name="source" xsi:type="string">jobapplication</item>
+                    <item name="dataScope" xsi:type="string">status</item>
+                </item>
+            </argument>
+        </field>
+        <field name="lgbtqia_community" sortOrder="160">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Lgbtqia Community</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/text</item>
+                    <item name="source" xsi:type="string">jobapplication</item>
+                    <item name="dataScope" xsi:type="string">lgbtqia_community</item>
+                </item>
+            </argument>
+        </field>
+        <field name="resume" sortOrder="170">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Resume</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/text</item>
+                    <item name="source" xsi:type="string">jobapplication</item>
+                    <item name="dataScope" xsi:type="string">resume</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+</form>

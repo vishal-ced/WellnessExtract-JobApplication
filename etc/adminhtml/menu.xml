@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="wellnessextract_jobapplication::core" title="Job Application" module="WellnessExtract_JobApplication" sortOrder="20" resource="WellnessExtract_JobApplication::sample"/>
+        <add id="WellnessExtract_JobApplication::configurations"
+             title="Settings"
+             module="WellnessExtract_JobApplication"
+             sortOrder="10"
+             parent="wellnessextract_jobapplication::core"
+             resource="WellnessExtract_JobApplication::configurations"
+        />
+        <add id="WellnessExtract_JobApplication::configuration"
+             title="Configuration"
+             module="WellnessExtract_JobApplication"
+             sortOrder="1"
+             parent="wellnessextract_jobapplication::core"
+             action="adminhtml/system_config/edit/section/jobapplconfiguration"
+             resource="WellnessExtract_JobApplication::configuration"
+        />
+        <add id="wellnessextract_jobapplication::test" title="Job Application" module="WellnessExtract_JobApplication" sortOrder="10" parent="wellnessextract_jobapplication::core" action="wellnessextract_jobapplication/items/" resource="WellnessExtract_JobApplication::items"/>
+    </menu>
+</config>

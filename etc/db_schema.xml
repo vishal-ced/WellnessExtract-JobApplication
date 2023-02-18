@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="job_application" resource="default" engine="innodb" comment="WellnessExtract Job Application Table">
+        <column xsi:type="int" name="id" padding="10" unsigned="true" nullable="false" identity="true" comment="ID"/>
+        <column xsi:type="text" name="resume" nullable="false" comment="Resume"/>
+        <column xsi:type="text" name="department" nullable="false" comment="Department"/>
+        <column xsi:type="text" name="first_name" nullable="false" comment="First Name"/>
+        <column xsi:type="text" name="preferred_name" nullable="false" comment="Preferred Name"/>
+        <column xsi:type="text" name="last_name" nullable="false" comment="Last Name"/>
+        <column xsi:type="text" name="preferred_pronoun" nullable="false" comment="Preferred Pronoun"/>
+        <column xsi:type="text" name="city" nullable="false" comment="City"/>
+        <column xsi:type="text" name="state" nullable="false" comment="State"/>
+        <column xsi:type="text" name="country" nullable="false" comment="Country"/>
+        <column xsi:type="text" name="email" nullable="false" comment="Email"/>
+        <column xsi:type="bigint" name="phone" nullable="false" comment="Phone"/>
+        <column xsi:type="text" name="linkedin_profile" nullable="false" comment="Linkedin Profile"/>
+        <column xsi:type="text" name="minimum_desired_pay" nullable="false" comment="Minimum Desired Pay"/>
+        <column xsi:type="text" name="ethnicity" nullable="false" comment="Ethnicity"/>
+        <column xsi:type="text" name="gender" nullable="false" comment="Gender"/>
+        <column xsi:type="text" name="status" nullable="false" comment="Status"/>
+        <column xsi:type="text" name="lgbtqia_community" nullable="false" comment="Lgbtqia Community"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>

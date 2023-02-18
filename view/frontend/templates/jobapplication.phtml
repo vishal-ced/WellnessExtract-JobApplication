@@ -1,0 +1,170 @@
+<?php $department = !empty($_GET['department']) ? $_GET['department'] : null;?>
+<?php if ($department): ?>
+    <form class="" action=
+    "<?= $block->getBaseUrl().'jobapplication/index/save'; ?>" id=
+    "wellnessextract-jobapplication-form" method="post" enctype=
+    "multipart/form-data"  data-mage-init='{"validation": {}}'>
+        <fieldset class="fieldset">
+            <div class="field resume">
+                <label class="required" for="resume"><span>Upload Resume pdf</span></label>
+                <div class="control">
+                    <input name="resume" id="resume" title="Resume" accept=".pdf"
+                    class="input-text" type="file"data-validate="{required:true}">
+                </div>
+            </div>
+            <div class="field department">
+                <div class="control">
+                    <input type="hidden" name="department" id="department"
+                    value="<?= $department; ?>"/>
+                </div>
+            </div>
+            <div class="field first_name">
+                <label class="required" for="first_name"><span>First Name</span></label>
+                <div class="control">
+                    <input name="first_name" id="first_name" title="Fname"
+                    class="input-text" type="text" data-validate="{required:true}">
+                </div>
+            </div>
+            <div class="field preferred_name">
+               <label class="preferred_name" for="preferred_name"><span>Preferred Name</span></label>
+                <div class="control">
+                    <input name="preferred_name" id="preferred_name" title="PreferredName"
+                    class="input-text" type="text">
+                </div>
+            </div>
+            <div class="field last_name">
+               <label class="required" for="last_name"><span>Last name</span></label>
+                <div class="control">
+                    <input name="last_name" id="last_name" title="Lname"
+                    class="input-text" type="text" data-validate="{required:true}">
+                </div>
+            </div>
+            <div class="field preferred_pronoun">
+                <label class="preferred_pronoun" for="preferred_pronoun"><span>Preferred Pronoun</span></label>
+                <div class="control">
+                    <input name="preferred_pronoun" id="preferred_pronoun" title="PreferredPronoun"
+                    class="input-text" type="text">
+                </div>
+            </div>
+            <div class="field city">
+               <label class="required" for="city"><span>City</span></label>
+                <div class="control">
+                    <input name="city" id="city" title="City" class="input-text" type="text"
+                    data-validate="{required:true}">
+                </div>
+            </div>
+            <div class="field state">
+                <label class="required" for="state"><span>State/Province</span></label>
+                <div class="control">
+                    <input name="state" id="state" title="State" class="input-text" type="text"
+                    data-validate="{required:true}">
+                </div>
+            </div>
+            <div class="field country">
+               <label class="required" for="country"><span>Country</span></label>
+                <div class="control">
+                    <select name="country" data-validate="{required:true}">
+                <option class="placeholder" name="country" disabled selected>Select Country</option>
+                <?php
+                    $countries = $block->getAvailableCountries();
+                foreach ($countries as $country) { ?>
+                        <option value="<?= $country->getName(); ?>">
+                            <?= $country->getName(); ?></option>
+                   <?php } ?>
+                </select>
+                </div>
+            </div>
+            <div class="field email">
+                <label class="required" for="email"><span>Email</span></label>
+                <div class="control">
+                    <input name="email" id="email" title="Email" class="input-text" type="email"
+                    data-validate="{required:true}">
+                </div>
+            </div>
+            <div class="field phone">
+                <label class="required" for="phone"><span>Phone</span></label>
+                <div class="control">
+                    <input name="phone" id="phone" title="Phone" class="input-text"
+                    type="text" pattern="[6789][0-9]{9}" data-validate="{required:true}">
+                </div>
+            </div>
+            <div class="field linkedin_profile">
+               <label class="linkedin_profile" for="linkedin_profile"><span>LinkedIn Public Profile Url</span></label>
+                <div class="control">
+                    <input name="linkedin_profile" id="linkedin_profile" title="LinkedIn"
+                    class="input-text" type="text">
+                </div>
+            </div>
+            <div class="field minimum_desired_pay">
+                <label class="minimum_desired_pay" for="minimum_desired_pay"><span>Minimum Desired Pay</span></label>
+                <div class="control">
+                    <input name="minimum_desired_pay" id="minimum_desired_pay"
+                    title="Minimum Desired Pay" class="input-text" type="number" data-validate="{required:true}">
+                </div>
+            </div>
+            <div class="field ethnicity"><br>
+                <label class="ethnicity" for="ethnicity"><span>I identify my ethencity as:</span>
+                </br></br>
+                </label>
+              <input type="checkbox" id="ethnicity" name="ethnicity[]" value="White/Caucasian">
+              <label for="White">White/Caucasian</label><br>
+              <input type="checkbox" id="ethnicity" name="ethnicity[]" value="Hispanic, Latino, or Spanish origin">
+              <label for="Hispanic">Hispanic, Latino, or Spanish origin</label><br>
+              <input type="checkbox" id="ethnicity" name="ethnicity[]" value="Black or African American">
+              <label for="Black">Black or African American</label><br>
+              <input type="checkbox" id="ethnicity" name="ethnicity[]" value="East Asian">
+              <label for="East">East Asian</label><br>
+              <input type="checkbox" id="ethnicity" name="ethnicity[]" value="South Asian">
+              <label for="South">South Asian</label><br>
+              <input type="checkbox" id="ethnicity" name="ethnicity[]"
+              value="Native Hawaliian or other pacific Islander">
+              <label for="Native">Native Hawaliian or other pacific Islander</label><br>
+              <input type="checkbox" id="ethnicity" name="ethnicity[]"
+              value="Indigenous Peoples, First Native American, or Alaska Native">
+              <label for="Indigenous">Indigenous Peoples, First Native American, or Alaska Native</label><br>
+              <input type="checkbox" id="ethnicity" name="ethnicity[]" value="Middle Eastern or North African">
+              <label for="Middle">Middle Eastern or North African</label><br>
+              <input type="checkbox" id="ethnicity" name="ethnicity[]" value="Anothe race, ethenicity, or origin">
+              <label for="Anothe">Anothe race, ethenicity, or origin</label><br>
+              <input type="checkbox" id="ethnicity" name="ethnicity[]" value="I prefer not to disclose">
+              <label for="disclose">I prefer not to disclose</label><br>
+          </div>
+            <div class="field gender">
+               <label class="gender" for="gender">
+                    <span>What gender do you most closely identify as?</span><br><br></label>
+             <input type="radio" id="female" name="gender" value="Female">
+             <label for="female">Female</label><br>
+             <input type="radio" id="male" name="gender" value="Male">
+             <label for="male">Male</label><br>
+             <input type="radio" id="non-binary" name="gender" value="Non-binary">
+             <label for="non-binary">Non-binary</label><br>
+            <input type="radio" id="prefer disclose" name="gender" value="I prefer not to prefer disclose">
+             <label for="disclose">I prefer not to disclose</label>
+          </div>
+
+          <div class="field community">
+               <label class="community" for="community">
+                    <span>Do you identify as part of the LGBTQIA + community?</span><br><br></label>
+             <input type="radio" id="lgbtqia_community" name="lgbtqia_community" value="Yes">
+             <label for="lgbtqia_community">Yes</label><br>
+             <input type="radio" id="lgbtqia_community" name="lgbtqia_community" value="No">
+             <label for="lgbtqia_community">No</label><br>
+            <input type="radio" id="lgbtqia_community" name="lgbtqia_community" value="I prefer not to prefer disclose">
+             <label for="disclose">I prefer not to disclose</label>
+          </div>
+        </fieldset>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button type="submit" title="Submit" class="action submit primary">
+                    <span>Submit Application</span>
+                </button>
+            </div>
+        </div>
+    </form>
+<?php endif; ?>
+<style>
+  .required:after {
+    content:" *";
+    color: red;
+  }
+</style>
